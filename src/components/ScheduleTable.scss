@@ -1,0 +1,86 @@
+$table-bg-color: #ddd;
+$table-even-row-bg-color: #f2f2f2;
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 100px;
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: $table-bg-color;
+  }
+
+  tr:nth-child(even) {
+    background-color: $table-even-row-bg-color;
+  }
+
+  td:nth-child(1) {
+    font-weight: bold;
+  }
+
+  td:nth-child(n+2):nth-child(-n+6) {
+    font-style: italic;
+  }
+  td {
+    max-width: 90px;
+    div {
+      max-width: 100%;
+    }
+  }
+}
+.relative {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.table-cell {
+  background-color:  lightblue;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  resize: horizontal;
+  overflow-y: visible;
+  overflow-x: auto;
+  z-index: 9;
+  max-width: 999px !important;
+  min-width: 50%;
+  p{
+    font-size:  18px;
+  }
+}
+
+.hasSubject {
+  height: 50px;
+}
+.popUp {
+  min-width: 200px;
+  position: absolute;
+  top: -60px;
+  z-index:  20;
+  left: 11%;
+  background-color: #EDDEA4;
+  padding:  10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  p{
+    color: black;
+  }
+}
+.content {
+  min-width: 100%;
+}
+.table-cell-withoutSubject {
+  min-width: 100%; 
+}
