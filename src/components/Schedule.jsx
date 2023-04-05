@@ -8,30 +8,35 @@ const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 const data = [
   {
+    id : 1,
     name: "Иванов",
     subjects: [
       { name: "Математика", teacher: "Ivanov", time: "14:00 - 15:00" },
     ],
   },
   {
+    id : 2,
     name: "Петров",
     subjects: [
       { name: "Математика", teacher: "Ivanov", time: "14:00 - 15:00" },
     ],
   },
   {
+    id : 3,
     name: "Сидорова",
     subjects: [
       { name: "Математика", teacher: "Ivanov", time: "14:00 - 15:00" },
     ],
   },
   {
+    id : 4,
     name: "Иванов",
     subjects: [
       { name: "Математика", teacher: "Ivanov", time: "14:00 - 15:00" },
     ],
   },
   {
+    id : 5,
     name: "Иванов",
     subjects: [
       { name: "Математика", teacher: "Ivanov", time: "14:00 - 15:00" },
@@ -90,7 +95,7 @@ const ScheduleTable = () => {
                     <TableCell
                       setScheduleData={setScheduleData}
                       scheduleData={scheduleData}
-                      key={`student-${studentIndex}-day-${dayIndex}`}
+                      key={`student-${student.id}-day-${dayIndex}`}
                       dayIndex={dayIndex}
                       studentIndex={studentIndex}
                       onDrop={handleDrop}
