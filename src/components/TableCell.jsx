@@ -16,10 +16,11 @@ const TableCell = ({
   const [isHover, setIsHover] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+    // Отображаем содержимое ячейки только если там есть предмет,в противном случае помещаем знак -
   useEffect(() => {
     setContent(subject?.name !== undefined ? subject : { name: "-" });
   }, [subject]);
-  const [{ isDragging }, drag] = useDrag(() => ({
+  const [{}, drag] = useDrag(() => ({
     type: "subject",
     item: { dayIndex, studentIndex, subject },
     collect: (monitor) => ({
@@ -41,7 +42,7 @@ const TableCell = ({
     }),
   }));
 
-  // Отображаем содержимое ячейки только если там есть предмет
+
   const handleSubmit = (data) => {
     const newScheduleData = [...scheduleData];
     newScheduleData[studentIndex].subjects[dayIndex] = {
